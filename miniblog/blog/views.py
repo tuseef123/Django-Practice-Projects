@@ -106,3 +106,8 @@ def delete_post(request,pk):
             return HttpResponseRedirect('/dashboard/')
     else:
         return HttpResponseRedirect('/login/')
+
+# 404 ERROR 
+
+def handler404(request,exception):
+    return render(request,'blog/404.html')

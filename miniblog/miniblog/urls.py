@@ -1,7 +1,10 @@
 
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import handler404
 from blog import views
+
+handler404 = views.handler404
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home),
